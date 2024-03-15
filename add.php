@@ -55,27 +55,35 @@ if (isset($_POST['Submit'])) {
             <h1 class="text-center">Add New Baby</h1>
             <br>
             <?php if (isset($successMsg)) : ?>
-                <div class="alert alert-success" role="alert">
-                    <?php echo $successMsg; ?></div>
+            <div class="alert alert-success" role="alert">
+                <?php echo $successMsg; ?></div>
             <?php endif; ?>
             <?php if (isset($errorMsg)) : ?>
-                <div class="alert alert-danger" role="alert">
-                    <?php echo $errorMsg; ?></div>
+            <div class="alert alert-danger" role="alert">
+                <?php echo $errorMsg; ?></div>
             <?php endif; ?>
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="form1">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post"
+                name="form1">
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" name="name" value="<?php echo isset($_POST['name']) ? $_POST['name'] : ''; ?>">
+                    <input type="text" class="form-control" id="name"
+                        name="name"
+                        value="<?php echo isset($_POST['name']) ? $_POST['name'] : ''; ?>">
                 </div>
                 <div class="form-group">
-                    <label for="qty">Age</label>
-                    <input type="number" class="form-control" id="qty" name="qty" value="<?php echo isset($_POST['qty']) ? $_POST['qty'] : ''; ?>">
+                    <label for="qty">Age (Year)</label>
+                    <input type="number" class="form-control" id="qty"
+                        name="qty"
+                        value="<?php echo isset($_POST['qty']) ? $_POST['qty'] : ''; ?>">
                 </div>
                 <div class="form-group">
                     <label for="price">Price</label>
-                    <input type="number" class="form-control" id="price" name="price" value="<?php echo isset($_POST['price']) ? $_POST['price'] : ''; ?>">
+                    <input type="number" class="form-control" id="price"
+                        name="price"
+                        value="<?php echo isset($_POST['price']) ? $_POST['price'] : ''; ?>">
                 </div>
-                <button type="submit" class="btn btn-primary" name="Submit">Add</button>
+                <button type="submit" class="btn btn-primary"
+                    name="Submit">Add</button>
             </form>
         </div>
     </div>
