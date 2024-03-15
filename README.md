@@ -24,8 +24,7 @@ To get started with the project, follow these steps:
 
 1. Clone the repository: `git clone <repository-url>`
 2. Configure the database connection in `connection.php` file.
-3. Run the project on a local server environment.
-
+3. Import the Database stored in the  `database` folder.
 ---
 
 ## Usage
