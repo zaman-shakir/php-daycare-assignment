@@ -67,7 +67,7 @@
                 $pass = mysqli_real_escape_string($mysqli, $_POST['password']);
 
                 if ($user == "" || $pass == "") {
-                    echo "<div class='alert alert-danger' role='alert'>Either username or password field is empty.</div>";
+                    echo "<div style='margin-top:70px;' class='alert alert-danger' role='alert'>Either username or password field is empty.</div>";
                 } else {
                     $result = mysqli_query($mysqli, "SELECT * FROM login WHERE username='$user' AND password=md5('$pass')")
                         or die("Could not execute the select query.");
@@ -80,7 +80,7 @@
                         $_SESSION['name'] = $row['name'];
                         $_SESSION['id'] = $row['id'];
                     } else {
-                        echo "<div class='alert alert-danger' role='alert'>Invalid username or password.</div>";
+                        echo "<div class='alert  alert-danger'style='margin-top:70px;' role='alert'>Invalid username or password.</div>";
                     }
 
                     if (isset($_SESSION['valid'])) {
