@@ -10,7 +10,7 @@ if (!isset($_SESSION['valid'])) {
 include_once("connection.php");
 
 // Fetching data in descending order (latest entry first)
-$result = mysqli_query($mysqli, "SELECT * FROM products WHERE login_id=" . $_SESSION['id'] . " ORDER BY id DESC");
+$result = mysqli_query($mysqli, "SELECT * FROM baby WHERE login_id=" . $_SESSION['id'] . " ORDER BY id DESC");
 ?>
 
 <?php include 'header.php'; ?>
@@ -36,19 +36,19 @@ $result = mysqli_query($mysqli, "SELECT * FROM products WHERE login_id=" . $_SES
                 </thead>
                 <tbody>
                     <?php
-        $count = 1; // Counter variable to track serial number
-        while ($res = mysqli_fetch_array($result)) {
-            echo "<tr>";
-            echo "<td>" . $count . "</td>"; // Display serial number
-            echo "<td>" . $res['name'] . "</td>";
-            echo "<td>" . $res['qty'] . "</td>";
-            echo "<td>" . $res['price'] . "</td>";
-            echo "<td>
+                    $count = 1; // Counter variable to track serial number
+                    while ($res = mysqli_fetch_array($result)) {
+                        echo "<tr>";
+                        echo "<td>" . $count . "</td>"; // Display serial number
+                        echo "<td>" . $res['name'] . "</td>";
+                        echo "<td>" . $res['qty'] . "</td>";
+                        echo "<td>" . $res['price'] . "</td>";
+                        echo "<td>
                     <a href=\"delete.php?id=$res[id]\" class='btn btn-danger' onclick=\"return confirm('Are you sure you want to delete?')\">Delete</a>
                   </td>";
-            echo "</tr>";
-            $count++; // Increment counter
-        }
+                        echo "</tr>";
+                        $count++; // Increment counter
+                    }
                     //     echo "<tr>";
                     //     echo "<td>" . $res['name'] . "</td>";
                     //     echo "<td>" . $res['qty'] . "</td>";

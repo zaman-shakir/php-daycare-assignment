@@ -45,10 +45,10 @@ INSERT INTO `login` (`id`, `name`, `email`, `username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `products`
+-- Table structure for table `baby`
 --
 
-CREATE TABLE `products` (
+CREATE TABLE `baby` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `qty` int(5) NOT NULL,
@@ -57,10 +57,10 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `products`
+-- Dumping data for table `baby`
 --
 
-INSERT INTO `products` (`id`, `name`, `qty`, `price`, `login_id`) VALUES
+INSERT INTO `baby` (`id`, `name`, `qty`, `price`, `login_id`) VALUES
 (3, 'Abdullah', 4, '40.00', 1);
 
 --
@@ -74,11 +74,11 @@ ALTER TABLE `login`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `products`
+-- Indexes for table `baby`
 --
-ALTER TABLE `products`
+ALTER TABLE `baby`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `FK_products_1` (`login_id`);
+  ADD KEY `FK_baby_1` (`login_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -91,9 +91,9 @@ ALTER TABLE `login`
   MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `products`
+-- AUTO_INCREMENT for table `baby`
 --
-ALTER TABLE `products`
+ALTER TABLE `baby`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
@@ -101,10 +101,10 @@ ALTER TABLE `products`
 --
 
 --
--- Constraints for table `products`
+-- Constraints for table `baby`
 --
-ALTER TABLE `products`
-  ADD CONSTRAINT `FK_products_1` FOREIGN KEY (`login_id`) REFERENCES `login` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `baby`
+  ADD CONSTRAINT `FK_baby_1` FOREIGN KEY (`login_id`) REFERENCES `login` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

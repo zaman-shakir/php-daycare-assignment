@@ -45,7 +45,7 @@
                     <li class="nav-item">
                         <?php
                         if (isset($_SESSION['valid'])) {
-                            echo '<a class="nav-link" href="view.php">View and Add Products</a>';
+                            echo '<a class="nav-link" href="view.php">View and Add baby</a>';
                         } else {
                             echo '<a class="nav-link" href="register.php">Register</a>';
                         }
