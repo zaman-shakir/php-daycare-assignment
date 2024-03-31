@@ -7,28 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        /* Custom CSS for header */
-        .navbar {
-            background-color: #f8f9fa;
-            /* Set background color for navbar */
-        }
+    /* Custom CSS for header */
+    .navbar {
+        background-color: #f8f9fa;
+        /* Set background color for navbar */
+    }
 
-        .navbar-toggler {
-            margin-left: auto;
-            /* Align toggler to the right */
-        }
+    .navbar-toggler {
+        margin-left: auto;
+        /* Align toggler to the right */
+    }
     </style>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse justify-content-center"
+                id="navbarSupportedContent">
                 <ul class="navbar-nav ">
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Home</a>
@@ -84,23 +89,27 @@
                     }
 
                     if (isset($_SESSION['valid'])) {
-                        header('Location: index.php');
+                        // header('Location: index.php');
+                        header('Location: dashboard.php');
                     }
                 }
             } else {
             ?>
-                <h2 class="text-center">Login</h2>
-                <form name="form1" method="post" action="">
-                    <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" class="form-control" id="username" name="username">
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password">
-                    </div>
-                    <button type="submit" class="btn btn-primary" name="submit">Submit</button>
-                </form>
+            <h2 class="text-center">Login</h2>
+            <form name="form1" method="post" action="">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username"
+                        name="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password"
+                        name="password">
+                </div>
+                <button type="submit" class="btn btn-primary"
+                    name="submit">Submit</button>
+            </form>
             <?php
             }
             ?>

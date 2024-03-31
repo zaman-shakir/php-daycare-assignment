@@ -3,21 +3,32 @@
 body {
 	margin: auto;
 	height: 500px;
-	padding: 20px;
+	/* padding: 20px; */
+
 }
 
 #header {
-	width: 700px;
-	color: maroon;
-	font-size: 32px;
-	padding: 10px 10px 10px 0px;
-	margin-bottom: 15px;
-	border-bottom: 1px solid green;
-}
 
+	padding: 20px 10px 20px 0px;
+	margin-bottom: 25px;
+    background: white;
+
+	border-bottom: 1px solid white;
+    background-color: yellowgreen;
+}
+.footer-section{
+    margin-top: 50px;
+    padding: 20px;
+    background-color: yellowgreen !important;
+}
 #footer {
 	border-top: 1px solid green;
 	margin-top: 20px;
 	color: #336699;
-	padding-top: 10px;	
+	padding-top: 10px;
+}
+
+.carousel-inner img {
+    height: 700px;
+    object-fit: fill;
 }
